@@ -15,35 +15,35 @@ export class WorkExampleService {
     private router: Router,
   ) {}
 
-  createWorkExample(workExample) {
+  create(workExample) {
     const headers = new Headers();
     headers.append('Authorization', `${this.authorization}`);
     return this.http.post(`${this.baseUrl}/work-examples`, workExample, {headers: headers})
     .map(res => res.json());
   }
 
-  deleteWorkExample(id) {
+  delete(id) {
     const headers = new Headers();
     headers.append('Authorization', `${this.authorization}`);
     return this.http.delete(`${this.baseUrl}/work-examples/${id}`, {headers: headers})
     .map(res => res);
   }
 
-  getWorkExamples() {
+  getAll() {
     const headers = new Headers();
     headers.append('Authorization', `${this.authorization}`);
     return this.http.get(`${this.baseUrl}/work-examples`, {headers: headers})
     .map(res => res.json());
   }
 
-  getWorkExample(id) {
+  get(id) {
     const headers = new Headers();
     headers.append('Authorization', `${this.authorization}`);
     return this.http.get(`${this.baseUrl}/work-examples/${id}`, {headers: headers})
     .map(res => res.json());
   }
 
-  updateWorkExample(workExample) {
+  update(workExample) {
     const headers = new Headers();
     headers.append('Authorization', `${this.authorization}`); ;
     return this.http.put(`${this.baseUrl}/work-examples/${workExample._id}`, workExample, {headers: headers})

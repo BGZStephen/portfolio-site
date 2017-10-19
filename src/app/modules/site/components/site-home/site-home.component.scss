@@ -1,0 +1,24 @@
+#site-home {
+  display: flex;
+  min-height: 100vh;
+  .js-container {
+    background: #f7df1e;
+    background-image: url('/assets/images/js-logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 300px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .node-js-container {
+    background: #333;
+    background-image: url('/assets/images/node-js-logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 400px auto;
+    width: 50%;
+  }
+}
