@@ -1,24 +1,52 @@
 #site-home {
   display: flex;
   min-height: 100vh;
+  .js-container,
+  .node-js-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
   .js-container {
     background: #f7df1e;
     background-image: url('/assets/images/js-logo.png');
+    background-position: center 37%;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: 300px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
   }
 
   .node-js-container {
     background: #333;
     background-image: url('/assets/images/node-js-logo.png');
+    background-position: center 37%;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: 400px auto;
-    width: 50%;
+  }
+
+  .front-end-js-overlay,
+  .back-end-js-overlay {
+    background: #FFF;
+    box-shadow: 4px 4px 4px black;
+    cursor: pointer;
+    padding: 20px 30px;
+    position: relative;
+    top: 13%;
+    transition: 0.3s ease all;
+  }
+
+  .front-end-js-overlay {
+    &:hover {
+      background: #333;
+      color: #f7df1e;
+    }
+  }
+
+  .back-end-js-overlay {
+    &:hover {
+      background: #43853d;
+      color: white;
+    }
   }
 }
