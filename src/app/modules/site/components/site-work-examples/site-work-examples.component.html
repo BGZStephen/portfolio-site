@@ -1,5 +1,10 @@
 <div id="{{exampleType}}">
-  <div class="test">
-    <p>Hi</p>
-  </div>
+  <h1>Work examples - {{exampleType}}</h1>
+  <ul *ngIf="workExamples">
+    <li *ngFor="let workExample of workExamples">
+      <h2>{{workExample.title}}</h2>
+      <img src="{{workExample.imgUrl}}">
+      <p>{{workExample.description}}</p>
+    </li>
+  </ul>
 </div>
