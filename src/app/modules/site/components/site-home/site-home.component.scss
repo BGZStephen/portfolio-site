@@ -1,20 +1,34 @@
 #site-home {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+
   .js-container,
   .node-js-container {
     align-items: center;
     display: flex;
+    height: 50vh;
     justify-content: center;
-    width: 50%;
+    min-height: 300px;
+
+    @media(min-width: $screen-lg) {
+      min-height: 100vh;
+      width: 50%;
+    }
   }
 
   .js-container {
     background: #f7df1e;
     background-image: url('/assets/images/js-logo.png');
-    background-position: center 37%;
     background-repeat: no-repeat;
-    background-size: 300px auto;
+    background-size: 150px auto;
+    background-position: center 30%;
+
+    @media(min-width: $screen-lg) {
+      background-position: center 37%;
+      background-size: 30% auto;
+    }
   }
 
   .node-js-container {
@@ -22,18 +36,47 @@
     background-image: url('/assets/images/node-js-logo.png');
     background-position: center 37%;
     background-repeat: no-repeat;
-    background-size: 400px auto;
+    background-size: 200px auto;
+    background-position: center 30%;
+
+    @media(min-width: $screen-lg) {
+      background-position: center 37%;
+      background-size: 40% auto;
+    }
   }
 
   .front-end-js-overlay,
   .back-end-js-overlay {
     background: #FFF;
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 2px 2px 3px black;
     cursor: pointer;
-    padding: 20px 30px;
+    padding: 10px 15px;
     position: relative;
-    top: 13%;
+    top: 18%;
     transition: 0.3s ease all;
+
+    h1 {
+      font-size: 1em;
+
+      @media(min-width: $screen-lg) {
+        font-size: 1.2em;
+      }
+
+      @media(min-width: $screen-x-lg) {
+        font-size: 1.6em;
+      }
+    }
+
+    @media(min-width: $screen-lg) {
+      box-shadow: 4px 4px 4px black;
+      padding: 15px 20px;
+      top: 18%;
+    }
+
+    @media(min-width: $screen-x-lg) {
+      padding: 20px 30px;
+      top: 13%;
+    }
   }
 
   .front-end-js-overlay {
@@ -48,5 +91,9 @@
       background: #43853d;
       color: white;
     }
+  }
+
+  @media(min-width: $screen-lg) {
+    flex-direction: row;
   }
 }
