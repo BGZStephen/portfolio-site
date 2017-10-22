@@ -1,11 +1,76 @@
 #front-end-js {
-  .test {
-    background: red;
+  background: #f7df1e;
+  padding: 10px;
+
+  ul {
+    li {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        background: #333;
+        color: #f7df1e;
+      }
+
+      p {
+        display: none;
+        @media(min-width: $screen-md) {
+          display: inline;
+        }
+      }
+    }
   }
 }
 
 #back-end-js {
-  .test {
-    background: blue;
+  background: #333;
+
+  ul {
+    li {
+      h2 {
+        background: #43853d;
+        color: #CCC;
+      }
+
+      p {}
+    }
+  }
+}
+
+#back-end-js,
+#front-end-js {
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  ul {
+    li {
+      h2 {
+        font-size: 1.4em;
+        margin: 5px 0 10px 0;
+        padding: 8px;
+        @media(min-width: $screen-md) {
+          font-size: 1.6em;
+          padding: 8px;
+        }
+      }
+      p {
+        padding: 0 10px;
+      }
+
+      @media(min-width: $screen-md) {
+        margin-bottom: 20px;
+        width: 48%
+      }
+
+      @media(min-width: $screen-lg) {
+        width: 31%
+      }
+    }
+    @media(min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 }

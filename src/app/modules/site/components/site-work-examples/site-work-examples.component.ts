@@ -9,7 +9,8 @@ import 'rxjs/add/operator/map';
 })
 export class SiteWorkExamplesComponent implements OnInit {
 
-  exampleType: String = 'front-end-js'
+  exampleType: String = 'front-end-js';
+  workExamples: Array<object> = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,8 +24,8 @@ export class SiteWorkExamplesComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.workExamples.getAll()
-    .subscribe(res => {
-      console.log(res)
+    .subscribe(workExamples => {
+      this.workExamples = workExamples;
     })
   }
 
