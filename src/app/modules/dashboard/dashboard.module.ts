@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // components
 import {
@@ -20,6 +21,7 @@ import { DashboardRoutes } from './dashboard.routes';
   imports: [
     CommonModule,
     DashboardRoutes,
+    FormsModule,
   ],
   providers: [],
   bootstrap: []

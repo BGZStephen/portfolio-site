@@ -1,10 +1,13 @@
 <div id="dashboard-login">
-  <div class="login-container">
-    <form #f="ngForm" (submit)="onLogin()">
-      <label for="emailInput">Email: </label>
-      <input id="emailInput" placeholder="Email:" type="text" name"email" #email ngModel>
-      <label for="passwordInput">Password: </label>
-      <input id="passwordInput" type="password" placeholder="Password" name="password" #password ngModel>
-    </form>
-  </div>
+  <h1>Dashboard Login</h1>
+  <form #f="ngForm" (submit)="onLogin()">
+    <div class="form-row">
+      <label for="emailInput">Email </label>
+      <input id="emailInput" type="text" name="email" #email ngModel>
+    </div>
+    <div class="form-row">
+      <label for="passwordInput">Password </label>
+      <input id="passwordInput" type="password" name="password" #password ngModel>
+    </div>
+  </form>
 </div>
