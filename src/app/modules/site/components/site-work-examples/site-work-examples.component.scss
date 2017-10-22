@@ -1,6 +1,5 @@
 #front-end-js {
   background: #f7df1e;
-  padding: 10px;
 
   ul {
     li {
@@ -24,26 +23,32 @@
 
 #back-end-js {
   background: #333;
-
+  h1 {
+    color: white;
+  }
   ul {
     li {
       h2 {
         background: #43853d;
         color: #CCC;
       }
-
-      p {}
+      p {
+        color: white;
+      }
     }
   }
 }
 
 #back-end-js,
 #front-end-js {
+  padding: 10px;
+  
   h1 {
     margin-bottom: 30px;
   }
 
   ul {
+    list-style: none;
     li {
       h2 {
         font-size: 1.4em;
