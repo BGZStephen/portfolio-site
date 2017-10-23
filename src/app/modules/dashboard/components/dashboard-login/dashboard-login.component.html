@@ -1,6 +1,6 @@
 <div id="dashboard-login">
   <h1>Dashboard Login</h1>
-  <form #f="ngForm" (submit)="onLogin()">
+  <form #f="ngForm" (submit)="onLogin(f.value)">
     <div class="form-row">
       <label for="emailInput">Email </label>
       <input id="emailInput" type="text" name="email" #email ngModel>
@@ -8,6 +8,9 @@
     <div class="form-row">
       <label for="passwordInput">Password </label>
       <input id="passwordInput" type="password" name="password" #password ngModel>
+    </div>
+    <div class="form-row">
+      <button type="submit">Submit</button>
     </div>
   </form>
 </div>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 
 // modules
 import { SiteModule } from 'app/modules/site/site.module';
@@ -26,7 +27,7 @@ import { ApiService } from 'app/services/api.service';
     AppRoutes,
     SiteModule,
   ],
-  providers: [ApiService],
+  providers: [ApiService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
