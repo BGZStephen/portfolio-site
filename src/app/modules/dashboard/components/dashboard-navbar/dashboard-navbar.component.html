@@ -2,18 +2,18 @@
   <div id="logo-container">
     Portfolio dashboard
   </div>
-  <ul class="menu-primary">
+  <ul *ngFor="let primaryMenu of navbarMenu" class="menu-primary">
     <li class="menu-item-primary">
       <div class="menu-content-primary">
-        <i class="fa fa-home"></i>
-        <p>Home</p>
-        <i class="fa fa-caret-down"></i>
+        <i class="fa {{primaryMenu.icon}}"></i>
+        <p>{{primaryMenu.title}}</p>
+        <i *ngIf="primaryMenu.submenu" class="fa fa-caret-down"></i>
       </div>
-      <ul class="menu-secondary">
+      <ul *ngFor="let secondaryMenu of primaryMenu.submenu" class="menu-secondary">
         <li class="menu-item-secondary">
           <div class="menu-content-secondary">
-            <i class="fa fa-home"></i>
-            <p>Home</p>
+            <i class="fa {{secondaryMenu.icon}}"></i>
+            <p>{{secondaryMenu.title}}</p>
           </div>
         </li>
       </ul>

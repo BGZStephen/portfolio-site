@@ -15,6 +15,7 @@ import { AppRoutes } from 'app/app.routes';
 
 // services
 import { ApiService } from 'app/services/api.service';
+import { MenuBuilder } from 'app/services/menu-builder.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ApiService } from 'app/services/api.service';
     AppRoutes,
     SiteModule,
   ],
-  providers: [ApiService, AuthService],
+  providers: [ApiService, AuthService, MenuBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
