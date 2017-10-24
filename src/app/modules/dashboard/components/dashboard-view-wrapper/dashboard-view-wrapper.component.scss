@@ -1,0 +1,24 @@
+#dashboard-view-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  #left-container {
+    width: 100%;
+    @media(min-width: $screen-sm) {
+      width: 280px;
+    }
+  }
+
+  #right-container {
+    width: 100%;
+    @media(min-width: $screen-sm) {
+      width: calc(100% - 280px);
+    }
+  }
+
+  @media(min-width: $screen-sm) {
+    flex-direction: row;
+  }
+}

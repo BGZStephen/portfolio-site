@@ -11,12 +11,14 @@ import {
 
 // routes
 import { DashboardRoutes } from './dashboard.routes';
+import { DashboardNavbarComponent } from './components/dashboard-navbar/dashboard-navbar.component';
 
 @NgModule({
   declarations: [
     DashboardViewWrapperComponent,
     DashboardHomeComponent,
-    DashboardLoginComponent
+    DashboardLoginComponent,
+    DashboardNavbarComponent
   ],
   imports: [
     CommonModule,
