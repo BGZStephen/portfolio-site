@@ -6,19 +6,19 @@
 
   #left-container {
     width: 100%;
-    @media(min-width: $screen-sm) {
+    @media(min-width: $screen-lg) {
       width: 280px;
     }
   }
 
   #right-container {
     width: 100%;
-    @media(min-width: $screen-sm) {
+    @media(min-width: $screen-lg) {
       width: calc(100% - 280px);
     }
   }
 
-  @media(min-width: $screen-sm) {
+  @media(min-width: $screen-lg) {
     flex-direction: row;
   }
 }
