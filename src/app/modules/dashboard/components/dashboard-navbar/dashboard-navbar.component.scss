@@ -51,7 +51,7 @@
   .menu-item-primary {
     display: flex;
     flex-direction: column;
-    height: 45px;
+    min-height: 45px;
 
     @media(min-width: $screen-lg) {
       height: auto;
@@ -61,7 +61,7 @@
   .menu-content-primary {
     align-items: center;
     display: flex;
-    height: 100%;
+    min-height: 45px;
     position: relative;
     transition: 0.3s ease all;
 

@@ -10,6 +10,7 @@ export class DashboardNavbarComponent implements OnInit {
   navbarMenu: Array<object>;
   menuVisible = false;
   activeSubmenu = -1;
+  submenuHeight: Number;
 
   constructor(
     private menuBuilder: MenuBuilder
@@ -37,9 +38,7 @@ export class DashboardNavbarComponent implements OnInit {
     }
 
     if (this.menuVisible && screen.width < 1024) {
-      const menuLength = document.getElementsByClassName('menu-primary')[0].children.length
-      const menuSize = `${menuLength * 45}px`
-      return {height: `${menuSize}`};
+      return {height: '100vh'};
     }
   }
 
@@ -48,15 +47,14 @@ export class DashboardNavbarComponent implements OnInit {
       return this.activeSubmenu = -1;
     }
     this.activeSubmenu = index;
-    console.log(this.activeSubmenu)
   }
 
   secondaryMenuStyle(index) {
     if (index === this.activeSubmenu) {
       let primaryMenu = document.getElementsByClassName('menu-item-primary')[index]
       let submenu = primaryMenu.getElementsByClassName('menu-secondary')[0]
-      let submenuHeight = `${submenu.children.length * 45}px`;
-      return {height: submenuHeight};
+      let submenuHeight = submenu.children.length * 45;
+      return {height: `${submenuHeight}px`};
     } else {
       return {height: 0};
     }
