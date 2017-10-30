@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -20,9 +20,10 @@ import { WorkExamplesRoutes } from './work-examples.routes';
   WorkExamplesViewComponent
 ],
   imports: [
-    BrowserModule,
+    CommonModule,
     HttpModule,
     FormsModule,
+    WorkExamplesRoutes,
   ],
   providers: [],
 })

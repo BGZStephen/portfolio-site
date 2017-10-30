@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+// modules
+import { WorkExamplesModule } from 'app/modules/dashboard/modules/work-examples/work-examples.module';
+
 // components
 import {
   DashboardViewWrapperComponent,
@@ -24,8 +27,8 @@ import { DashboardNavbarComponent } from './components/dashboard-navbar/dashboar
     CommonModule,
     DashboardRoutes,
     FormsModule,
+    WorkExamplesModule,
   ],
   providers: [],
-  bootstrap: []
 })
 export class DashboardModule { }
