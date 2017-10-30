@@ -8,9 +8,9 @@
       <div class="menu-content-primary">
         <i class="fa {{primaryMenuItem.icon}}"></i>
         <p>{{primaryMenuItem.title}}</p>
-        <i *ngIf="primaryMenuItem.submenu" class="fa fa-caret-down" (click)="toggleSecondaryMenuVisibility(i)"></i>
+        <i *ngIf="primaryMenuItem.submenu" class="fa fa-caret-down" (click)="setActiveSubmenu(i)"></i>
       </div>
-      <ul *ngFor="let secondaryMenu of primaryMenuItem.submenu; let j = index" class="menu-secondary" [ngStyle]="secondaryMenuStyle(j)">
+      <ul *ngFor="let secondaryMenu of primaryMenuItem.submenu; let j = index" class="menu-secondary" [ngStyle]="secondaryMenuStyle(i)">
         <li class="menu-item-secondary">
           <div class="menu-content-secondary">
             <i class="fa {{secondaryMenu.icon}}"></i>

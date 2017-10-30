@@ -97,7 +97,7 @@
   .menu-item-secondary {
     display: flex;
     flex-direction: column;
-    height: 0;
+    height: 45px;
     overflow: hidden;
 
     @media(min-width: $screen-lg) {
