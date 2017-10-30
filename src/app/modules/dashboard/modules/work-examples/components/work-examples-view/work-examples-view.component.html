@@ -1,7 +1,7 @@
 <div id="work-examples-view">
   <div class="row">
     <div class="col-3" *ngFor="let workExample of workExamples">
-      <h2>{{workExample.title}}</h2>
+      <h2 routerLink="{{workExample._id}}">{{workExample.title}}</h2>
       <p>{{workExample.description}}</p>
     </div>
   </div>

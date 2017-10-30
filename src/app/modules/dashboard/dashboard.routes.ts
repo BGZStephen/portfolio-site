@@ -8,7 +8,6 @@ import {
 const DASHBOARD_ROUTES: Routes = [
   {path: 'login', component: DashboardLoginComponent },
   {path: '', component: DashboardViewWrapperComponent, children: [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: DashboardHomeComponent},
     {path: 'work-examples', loadChildren: './modules/work-examples/work-examples.module#WorkExamplesModule'},
   ]},

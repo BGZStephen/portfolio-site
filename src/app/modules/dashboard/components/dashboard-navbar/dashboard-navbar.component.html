@@ -5,7 +5,7 @@
   </div>
   <ul class="menu-primary" [ngStyle]="primaryMenuStyle()" (window:resize)="primaryMenuStyle()">
     <li *ngFor="let primaryMenuItem of navbarMenu; let i = index" class="menu-item-primary">
-      <div class="menu-content-primary">
+      <div class="menu-content-primary" routerLink="{{primaryMenuItem.url}}">
         <i class="fa {{primaryMenuItem.icon}}"></i>
         <p>{{primaryMenuItem.title}}</p>
         <i *ngIf="primaryMenuItem.submenu" class="fa fa-caret-down" (click)="setActiveSubmenu(i)"></i>

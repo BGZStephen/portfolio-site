@@ -1,3 +1,15 @@
 #work-examples-view {
   padding: 10px;
+
+  .col-3 {
+    justify-content: flex-start;
+    align-content: flex-start;
+    background: white;
+    padding: 10px;
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+  }
 }
