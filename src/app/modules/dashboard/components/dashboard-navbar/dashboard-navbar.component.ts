@@ -25,16 +25,12 @@ export class DashboardNavbarComponent implements OnInit {
   }
 
   primaryMenuStyle() {
-    if (!this.menuVisible && screen.width > 1024) {
-      this.menuVisible = true;
+    if (screen.width > 1024) {
+      return {height: 'calc(100vh - 45px)'};
     }
 
     if (!this.menuVisible) {
       return {height: 0};
-    }
-
-    if (this.menuVisible && screen.width > 1024) {
-      return {height: 'calc(100vh - 45px)'};
     }
 
     if (this.menuVisible && screen.width < 1024) {
