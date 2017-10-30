@@ -140,5 +140,8 @@
 
   @media(min-width: $screen-lg) {
     min-height: 100vh;
+    position: fixed;
+    left: 0;
+    width: 280px;
   }
 }

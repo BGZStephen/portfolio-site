@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
 
   #left-container {
     width: 100%;
@@ -12,6 +12,7 @@
   }
 
   #right-container {
+    background: #EEE;
     width: 100%;
     @media(min-width: $screen-lg) {
       width: calc(100% - 280px);

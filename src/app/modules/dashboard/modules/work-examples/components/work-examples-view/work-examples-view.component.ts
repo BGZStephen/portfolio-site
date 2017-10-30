@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'app/services/api.service'
 
 @Component({
   selector: 'app-work-examples-view',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkExamplesViewComponent implements OnInit {
 
-  constructor() { }
+  workExamples: Array<object>;
+
+  constructor(
+    private apiService: ApiService
+  ) { }
 
   ngOnInit() {
+    this.apiService.workExamples.getAll()
+    .subscribe((workExamples) => {
+      this.workExamples = workExamples;
+    })
   }
 
 }
