@@ -13,9 +13,9 @@ import {
 const DASHBOARD_ROUTES: Routes = [
   {path: 'login', component: DashboardLoginComponent },
   {path: '', component: DashboardViewWrapperComponent, children: [
-    {path: 'home', component: DashboardHomeComponent},
+    {path: '', component: DashboardHomeComponent},
     {path: 'work-examples', component: WorkExamplesViewComponent},
-    {path: 'work-examples/:id', component: WorkExampleViewComponent}
+    {path: 'work-examples/:id', component: WorkExampleViewComponent},
   ]},
 ]
 

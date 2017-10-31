@@ -50,6 +50,7 @@
   }
 
   .menu-item-primary {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     min-height: 45px;
@@ -97,6 +98,7 @@
   }
 
   .menu-item-secondary {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     height: 45px;

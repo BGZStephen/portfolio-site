@@ -4,7 +4,6 @@ import { ApiService } from 'app/services/api.service'
 @Component({
   selector: 'app-work-examples-view',
   templateUrl: './work-examples-view.component.html',
-  styleUrls: ['./work-examples-view.component.scss']
 })
 export class WorkExamplesViewComponent implements OnInit {
 

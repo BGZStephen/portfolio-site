@@ -3,7 +3,7 @@ export class MenuBuilder {
       return [
         {
           slug: 'home',
-          url: '/dashboard/home',
+          url: '/dashboard',
           icon: 'fa-home',
           title: 'Home',
         },
