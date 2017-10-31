@@ -15,7 +15,7 @@ export class MenuBuilder {
           submenu: [
             {
               slug: 'add',
-              url: '/dashboard/work-examples/add',
+              url: '/dashboard/work-examples',
               icon: 'fa-plus',
               title: 'Add',
             },

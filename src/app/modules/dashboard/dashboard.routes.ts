@@ -5,11 +5,17 @@ import {
   DashboardLoginComponent,
  } from './components/dashboard-components-barrel';
 
+ import {
+   WorkExamplesViewComponent,
+   WorkExampleViewComponent,
+ } from './modules/work-examples/components/work-examples-components-barrel';
+
 const DASHBOARD_ROUTES: Routes = [
   {path: 'login', component: DashboardLoginComponent },
   {path: '', component: DashboardViewWrapperComponent, children: [
     {path: 'home', component: DashboardHomeComponent},
-    {path: 'work-examples', loadChildren: './modules/work-examples/work-examples.module#WorkExamplesModule'},
+    {path: 'work-examples', component: WorkExamplesViewComponent},
+    {path: 'work-examples/:id', component: WorkExampleViewComponent}
   ]},
 ]
 
