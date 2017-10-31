@@ -1,5 +1,3 @@
-import * as _ from 'lodash';
-
 class Column {
   constructor(column?) {
     if(column) {
@@ -22,12 +20,8 @@ class Column {
 
 export class WorkExampleContentEditor {
   constructor (
-    private apiService,
-    private notification,
     private workExample?,
   ) {
-    this.apiService = apiService
-    this.notification = notification
     this.workExample = workExample || {}
   }
 
@@ -67,21 +61,13 @@ export class WorkExampleContentEditor {
     if(!this.workExample.content) {
       this.workExample.content = []
     };
-    this.workExample.content.push(_.cloneDeep(this.sectionTypes[0]));
-  }
-
-  removeSection(sectionIndex) {
-    this.workExample.content.splice(sectionIndex, sectionIndex + 1);
-  }
-
-  deleteWorkExample() {
-    return this.apiService.deleteWorkExample(this.workExample._id);
+    this.workExample.content.push(this.clone(this.sectionTypes[0]));
   }
 
   updateSection(newSectionType, sectionIndex) {
     for (const sectionType of this.sectionTypes) {
       if (sectionType.option === newSectionType) {
-        this.workExample.content[sectionIndex].columns = _.cloneDeep(sectionType.columns);
+        this.workExample.content[sectionIndex].columns = this.clone(sectionType.columns);
       }
     }
   }
@@ -102,23 +88,7 @@ export class WorkExampleContentEditor {
     return largestIndex + 1;
   }
 
-  insertImage(imageUrl, sectionIndex, columnIndex) {
-    this.workExample.content[sectionIndex].columns[columnIndex].imageUrl = imageUrl;
-    return this.save();
-  }
-
-  createWorkExample() {
-    return this.apiService.createWorkExample(this.workExample)
-  }
-
-  save() {
-    this.apiService.updateWorkExample(this.workExample)
-    .subscribe(workExample => {
-      this.workExample = workExample;
-      this.instanciateColumns()
-      this.notification.success({
-        message: 'Upload successful',
-      });
-    });
+  clone(item) {
+    return JSON.parse(JSON.stringify(item));
   }
 }
