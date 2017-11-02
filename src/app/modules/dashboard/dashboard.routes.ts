@@ -8,7 +8,7 @@ import {
  import {
    WorkExamplesViewComponent,
    WorkExampleViewComponent,
- } from './modules/work-examples/components/work-examples-components-barrel';
+ } from './components/work-examples-components-barrel';
 
 const DASHBOARD_ROUTES: Routes = [
   {path: 'login', component: DashboardLoginComponent },

@@ -2,15 +2,17 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-// modules
-import { WorkExamplesModule } from 'app/modules/dashboard/modules/work-examples/work-examples.module';
-
 // components
 import {
   DashboardViewWrapperComponent,
   DashboardHomeComponent,
   DashboardLoginComponent,
 } from './components/dashboard-components-barrel';
+
+import {
+  WorkExamplesViewComponent,
+  WorkExampleViewComponent,
+} from './components/work-examples-components-barrel';
 
 // routes
 import { DashboardRoutes } from './dashboard.routes';
@@ -21,13 +23,14 @@ import { DashboardNavbarComponent } from './components/dashboard-navbar/dashboar
     DashboardViewWrapperComponent,
     DashboardHomeComponent,
     DashboardLoginComponent,
-    DashboardNavbarComponent
+    DashboardNavbarComponent,
+    WorkExamplesViewComponent,
+    WorkExampleViewComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutes,
     FormsModule,
-    WorkExamplesModule,
   ],
   providers: [],
 })
