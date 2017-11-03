@@ -1,32 +1,40 @@
 <div id="work-example-view">
-  <h2>{{workExample.workExample.title}}</h2>
-  <p>{{workExample.workExample.createdOn | date}}</p>
-  <p>{{workExample.workExample.description}}</p>
-  <div *ngFor="let section of workExample.workExample.content">
-    <label>Section title</label>
-    <input type="text">
-    <label>Section type</label>
-    <select>
-      <option>One column</option>
-      <option>Two column</option>
-      <option>Three column</option>
-    </select>
-    <label>Section description</label>
-    <textarea type="text"></textarea>
-  </div>
-  <div>
-    <label>Section title</label>
-    <input type="text">
-    <label>Section type</label>
-    <select>
-      <option>One column</option>
-      <option>Two column</option>
-      <option>Three column</option>
-    </select>
-    <label>Section description</label>
-    <textarea type="text"></textarea>
-  </div>
-  <button class="button button--danger">Delete section</button>
-  <button class="button button--primary">Add section</button>
-  <button class="button button--success">Save</button>
+  <form #f="ngForm" (submit)="onSave()" *ngIf="workExample">
+    <h2>Editing: {{workExample.workExample.title}}</h2>
+    <div class="row">
+      <label>Title: </label>
+      <input type="text" name="title" ngModel="workExample.workExample.title">
+    </div>
+    <div class="row">
+      <label>Description: </label>
+      <textarea name="description" ngModel="workExample.workExample.description">
+    </div>
+    <div *ngFor="let section of workExample.workExample.content">
+      <label>Section title</label>
+      <input type="text">
+      <label>Section type</label>
+      <select>
+        <option>One column</option>
+        <option>Two column</option>
+        <option>Three column</option>
+      </select>
+      <label>Section description</label>
+      <textarea type="text"></textarea>
+      <button class="button button--danger" (click)="onDeleteSection()">Delete section</button>
+    </div>
+    <div>
+      <label>Section title</label>
+      <input type="text" name="newSectionTitle" ngModel="{{workExample.newSection.title}}">
+      <label>Section type</label>
+      <select>
+        <option>One column</option>
+        <option>Two column</option>
+        <option>Three column</option>
+      </select>
+      <label>Section description</label>
+      <textarea name="newSectionDescription" ngModel="{{workExample.newSection.description}}"></textarea>
+    </div>
+    <button class="button button--primary" (click)="onAddSection()">Add section</button>
+    <button class="button button--success" (click)="onSave()">Save</button>
+  </form>
 </div>
