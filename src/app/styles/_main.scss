@@ -5,12 +5,12 @@
 @import './includes/services/notification-service';
 @import './includes/services/loading-mask-service';
 
-@import 'app/modules/site/components/site-home/site-home.component';
+@import '../modules/site/components/site-home/site-home.component';
 
-@import 'app/modules/dashboard/components/dashboard-login/dashboard-login.component';
-@import 'app/modules/dashboard/components/dashboard-view-wrapper/dashboard-view-wrapper.component';
-@import 'app/modules/dashboard/components/dashboard-navbar/dashboard-navbar.component';
-@import 'app/modules/dashboard/components/work-examples-view/work-examples-view.component';
-@import 'app/modules/dashboard/components/work-example-view/work-example-view.component';
+@import '../modules/dashboard/components/dashboard-login/dashboard-login.component';
+@import '../modules/dashboard/components/dashboard-view-wrapper/dashboard-view-wrapper.component';
+@import '../modules/dashboard/components/dashboard-navbar/dashboard-navbar.component';
+@import '../modules/dashboard/components/work-examples-view/work-examples-view.component';
+@import '../modules/dashboard/components/work-example-view/work-example-view.component';
 
-@import 'app/modules/site/components/site-work-examples/site-work-examples.component'
+@import '../modules/site/components/site-work-examples/site-work-examples.component';
