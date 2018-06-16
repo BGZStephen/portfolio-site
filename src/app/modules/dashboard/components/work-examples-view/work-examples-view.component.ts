@@ -1,23 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'app/services/api.service'
+import { ApiService } from '@services/api.service';
 
 @Component({
-  selector: 'app-work-examples-view',
-  templateUrl: './work-examples-view.component.html',
+	selector: 'app-work-examples-view',
+	template: require('./work-examples-view.component.html'),
 })
 export class WorkExamplesViewComponent implements OnInit {
+	workExamples: Array<object>;
 
-  workExamples: Array<object>;
+	constructor(private apiService: ApiService) {}
 
-  constructor(
-    private apiService: ApiService
-  ) { }
-
-  ngOnInit() {
-    this.apiService.workExamples.getAll()
-    .subscribe((workExamples) => {
-      this.workExamples = workExamples;
-    })
-  }
-
+	ngOnInit() {
+		this.apiService.workExamples.getAll().subscribe(workExamples => {
+			this.workExamples = workExamples;
+		});
+	}
 }

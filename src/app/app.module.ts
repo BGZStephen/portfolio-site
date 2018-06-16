@@ -1,34 +1,28 @@
+import './main.scss';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
-import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SiteModule } from './modules/site/site.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { AppRoutes } from './app.routes';
 
-// modules
-import { SiteModule } from 'app/modules/site/site.module';
-
-// components
 import { AppComponent } from './app.component';
 
-// routes
-import { AppRoutes } from 'app/app.routes';
-
-// services
-import { ApiService } from 'app/services/api.service';
-import { MenuBuilder } from 'app/services/menu-builder.service';
+export function tokenGetter() {
+	return localStorage.getItem('token');
+}
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    FormsModule,
-    AppRoutes,
-    SiteModule,
-  ],
-  providers: [ApiService, AuthService, MenuBuilder],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		AppRoutes,
+		SiteModule,
+		DashboardModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent],
+	entryComponents: [],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,23 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'app/services/auth.service';
-import 'rxjs/add/operator/map';
+import { AuthService } from '@services/auth.service';
 
 @Component({
-  selector: 'app-dashboard-login',
-  templateUrl: './dashboard-login.component.html',
+	selector: 'app-dashboard-login',
+	template: require('./dashboard-login.component.html'),
 })
 export class DashboardLoginComponent implements OnInit {
+	constructor(private authService: AuthService) {}
 
-  constructor(
-    private authService: AuthService,
-  ) { }
+	ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  onLogin(user) {
-    this.authService.authenticate(user)
-    console.log(user);
-  }
-
+	onLogin(user) {
+		this.authService.authenticate(user);
+		console.log(user);
+	}
 }
