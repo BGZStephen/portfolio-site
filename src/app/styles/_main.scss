@@ -1,8 +1,5 @@
 @import './includes/variables/index';
 @import './includes/globals';
-@import './includes/components/index';
-
-@import './includes/services/notification-service';
-@import './includes/services/loading-mask-service';
+@import './includes/components/grid';
 
 @import '../modules/site/components/home-view/home-view.component';
