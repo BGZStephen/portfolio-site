@@ -15,7 +15,6 @@
 		"@angular/platform-browser": "^5.2.10",
 		"@angular/platform-browser-dynamic": "^5.2.10",
 		"@angular/router": "^5.2.10",
-		"@auth0/angular-jwt": "^1.1.0",
 		"@types/node": "^6.0.107",
 		"clean-webpack-plugin": "^0.1.19",
 		"css-loader": "^0.28.11",
@@ -24,8 +23,6 @@
 		"html-webpack-plugin": "^3.2.0",
 		"mini-css-extract-plugin": "^0.4.0",
 		"node-sass": "^4.9.0",
-		"path": "^0.12.7",
-		"progress-bar-webpack-plugin": "^1.11.0",
 		"reflect-metadata": "^0.1.12",
 		"rxjs": "^6.0.0",
 		"rxjs-compat": "^6.0.0",
@@ -38,8 +35,5 @@
 		"webpack-dev-server": "^3.1.3",
 		"zone.js": "^0.8.26"
 	},
-	"dependencies": {
-		"angular2-jwt": "^0.2.3",
-		"chart.js": "^2.7.2"
-	}
+	"dependencies": {}
 }
