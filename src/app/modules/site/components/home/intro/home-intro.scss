@@ -1,0 +1,95 @@
+@-webkit-keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@-moz-keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@-o-keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.home-intro {
+	background-image: url('assets/img/bg_lg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	background-position: center;
+
+	.hero-container {
+		text-align: center;
+		padding: 40px 20px;
+
+		h1 {
+			font-size: 2em;
+			margin-bottom: 10px;
+			@media (min-width: 720px) {
+				font-size: 3em;
+			}
+		}
+
+		h2 {
+			font-size: 1.4em;
+
+			@media (min-width: 720px) {
+				font-size: 2em;
+			}
+		}
+
+		strong {
+			&::after {
+				margin-right: -15px;
+				content: '|';
+				-webkit-animation: cursor-blink 0.8s infinite; /* Safari 4+ */
+				-moz-animation: cursor-blink 0.8s infinite; /* Fx 5+ */
+				-o-animation: cursor-blink 0.8s infinite; /* Opera 12+ */
+				animation: cursor-blink 0.8s infinite; /* IE 10+, Fx 29+ */
+				position: relative;
+				top: -2px;
+			}
+		}
+
+		@media (min-width: 720px) {
+			padding-top: 100px;
+		}
+	}
+
+	.content-container {
+		width: 100%;
+		text-align: center;
+	}
+}
