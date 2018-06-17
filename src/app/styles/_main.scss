@@ -1,16 +1,5 @@
 @import './includes/variables/index';
 @import './includes/globals';
-@import './includes/components/index';
+@import './includes/components/grid';
 
-@import './includes/services/notification-service';
-@import './includes/services/loading-mask-service';
-
-@import '../modules/site/components/site-home/site-home.component';
-
-@import '../modules/dashboard/components/dashboard-login/dashboard-login.component';
-@import '../modules/dashboard/components/dashboard-view-wrapper/dashboard-view-wrapper.component';
-@import '../modules/dashboard/components/dashboard-navbar/dashboard-navbar.component';
-@import '../modules/dashboard/components/work-examples-view/work-examples-view.component';
-@import '../modules/dashboard/components/work-example-view/work-example-view.component';
-
-@import '../modules/site/components/site-work-examples/site-work-examples.component';
+@import '../modules/site/components/home-view/home-view.component';

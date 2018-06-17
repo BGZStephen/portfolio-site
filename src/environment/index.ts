@@ -5,6 +5,11 @@ const configs = {
 		authorization: '$AUTHORIZATION',
 		apiUrl: '$API_URL',
 	},
+	staging: {
+		production: '$BOOLEAN',
+		authorization: '$AUTHORIZATION',
+		apiUrl: '$API_URL',
+	},
 	production: {
 		production: '$BOOLEAN',
 		authorization: '$AUTHORIZATION',
