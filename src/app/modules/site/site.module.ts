@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import * as components from './components';
 
 @NgModule({
-	declarations: [components.HomeView],
+	declarations: [components.HomeView, components.HomeIntro],
 	imports: [CommonModule],
 	providers: [],
 })

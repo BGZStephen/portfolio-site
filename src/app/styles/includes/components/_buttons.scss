@@ -1,0 +1,59 @@
+.button {
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 10px 15px;
+	margin: 10px;
+	transition: 0.3s ease all;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.button-github {
+	background: black;
+	color: white;
+
+	i {
+		margin-right: 10px;
+	}
+}
+
+.button-linkedin {
+	background: #4875b4;
+	color: white;
+
+	i {
+		margin-right: 10px;
+	}
+
+	&:hover {
+		background: darken(#4875b4, 5%);
+	}
+}
+
+.button-email {
+	background: #96ceb4;
+	color: black;
+
+	i {
+		margin-right: 10px;
+	}
+
+	&:hover {
+		background: darken(#96ceb4, 5%);
+	}
+}
+
+.button-phone {
+	background: #ff6f69;
+	color: black;
+
+	i {
+		margin-right: 10px;
+	}
+
+	&:hover {
+		background: darken(#ff6f69, 5%);
+	}
+}

@@ -1,5 +1,7 @@
 @import './includes/variables/index';
 @import './includes/globals';
 @import './includes/components/grid';
+@import './includes/components/buttons';
 
-@import '../modules/site/components/home-view/home-view.component';
+@import '../modules/site/components/home/view/home-view';
+@import '../modules/site/components/home/intro/home-intro';
